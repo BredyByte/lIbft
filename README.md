@@ -14,7 +14,7 @@
 
 <b>memset</b> - <mark>void	*ft_memset(void *b, int c, size_t len);</mark> Function returns a pointer to an array of any type. Takes 1 - pointer to the first element of an array of any type, 2 - element with which we want to replace the elements in the string, 3 - length - how many elements we want to replace.
 
-<b>bzero</b> - <mark>void	ft_bzero(void *s, size_t n);</mark> Function returns a pointer to the first element of an array of any type. Takes 1 - pointer to the first element of an array of any type, 2 - length, how many elements need to be replaced by zeros.
+<b>bzero</b> - <mark>void	ft_bzero(void *s, size_t n);</mark> Function returns nothing. Takes 1 - pointer to the first element of an array of any type, 2 - length, how many elements need to be replaced by zeros.
 
 <b>memcpy</b> - <mark>void	*ft_memcpy(void *dest, const void *src, size_t len);</mark> Function returns a pointer to the first element of an array of any type. Takes as arguments  1 - pointer to the first element of an array of any type, an array whose elements will be replaced, 2 - pointer to the first element of an array of any type, an array whose elements will replace the elements of the first array, 3 - length - how many elements need to be replaced.
 
