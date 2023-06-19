@@ -10,12 +10,11 @@ OBJ_PATH = obj
 SRC_PATH = src
 INC_PATH = inc
 
-R = \033[31;1m
-G = \033[32;1m
-B = \033[34;1m
-M = \033[35;1m
-C = \033[36;1m
-Y = \033[33;1m
+R = \033[1;31m
+G = \033[1;32m
+C = \033[1;36m
+O = \033[1;38;5;208m
+P = \033[1;38;5;141m
 END = \033[0m
 
 .DEFAULT_GOAL := all
@@ -38,6 +37,7 @@ $(NAME): $(OBJ)
 
 bonus: $(OBJ) $(BONUS_OBJ)
 	$(ARFLAGS) $(NAME) $(OBJ) $(BONUS_OBJ)
+	@echo "\n$(P)[Compiled $(C)'$@' $(G)successfully]\n$(END)"
 
 $(OBJ_PATH)/%.o: $(SRC_PATH)/%.c $(INC_PATH)/libft.h
 	mkdir -p $(OBJ_PATH)
@@ -45,10 +45,10 @@ $(OBJ_PATH)/%.o: $(SRC_PATH)/%.c $(INC_PATH)/libft.h
 
 clean:
 	$(REMOVE) $(OBJ_PATH)
-	@echo "\n$(Y)[Cleaned $(C) $(NAME) objects $(Y)successfully]\n$(END)"
+	@echo "\n$(O)[Cleaned $(C) $(NAME) objects $(G)successfully]\n$(END)"
 
 fclean: clean
 	$(REMOVE) $(NAME)
-	@echo "$(R)[Removed $(C)'$(NAME)' $(R)successfully]\n$(END)"
+	@echo "$(R)[Removed $(C)'$(NAME)' $(G)successfully]\n$(END)"
 
 re: fclean all
